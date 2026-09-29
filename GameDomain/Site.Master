@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GameDomain.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> -Game Domain</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+<!-- Custom Game Domain Navigation Header -->
+
+<div style="background-color: rgba(0, 0, 0, 0.8); padding: 2%; text-align: center; position: sticky; top: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+
+    <div style="display: flex; align-items: center;">
+        <img src="Assets/Logo.png" alt="Logo" style="max-height: 60px; margin-left: 2%; border-radius: 50%;">
+        <h1 style="font-size: xx-large; color: white; margin: 0; margin-left: 2%;">GAME DOMAIN</h1>
+    </div>
+
+
+    <div style="display: flex; align-items: center; flex-wrap: nowrap; margin-top: 1%;">
+        <a href="Default.aspx" style="font-size: large; color: rgb(42, 124, 211); text-decoration: none; margin: 2%;"><b>HOME</b></a>
+        <a href="Products.aspx" style="font-size: large; color: rgb(42, 124, 211); text-decoration: none; margin: 2%;"><b>PRODUCTS</b></a>
+        <a href="About.aspx" style="font-size: large; color: rgb(42, 124, 211); text-decoration: none; margin: 2%;"><b>ABOUT US</b></a>
+        <a href="Contact.aspx" style="font-size: large; color: rgb(42, 124, 211); text-decoration: none; margin: 2%;"><b>CONTACT US</b></a>
+    </div>
+</div>    
+
+
+        <!-- Main Content Container -->
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+
+
+           <!-- Custom Game Domain Footer -->
+            <footer>
+                <div style="background-color: rgb(42, 124, 211); color: #fff; text-align: center; padding: 1.5%; border-radius: 3vw; width: auto; margin: 2% auto;">
+                    <img src="~/Assets/Logo.png" runat="server" alt="Logo" style="max-height: 60px; margin-left: 2%; border-radius: 50%;">
+                    <p style="color: #f2f2f2; margin: 0;">&copy; <%: DateTime.Now.Year %> Game Domain. All rights reserved.</p>
+                    <p style="color: #f2f2f2; margin: 0;">Phone: (876) 435-1367</p>
+                    <p style="color: #f2f2f2; margin: 0;">Email: <a href="mailto:GameDomain@gmail.com" style="color: white; text-decoration: underline;">gamedomain@gmail.com</a></p>              
+                </div>
+            </footer>
+        </div>
+    </form>
+
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+    </asp:PlaceHolder>
+</body>
+</html>

@@ -1,0 +1,120 @@
+﻿/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .body-content {
+        padding: 0;
+    }
+}
+
+
+/* GAME DOMAIN CUSTOM STYLES                 */
+
+
+/* Global Body & Background Styles */
+body {
+    background-image: url('../Assets/Background2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h1 {
+    color: rgb(42, 124, 211);
+}
+
+h2 {
+    color: rgb(42, 124, 211);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    color: #333;
+}
+
+/* Product Section Styles */
+.console-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2%;
+    border-radius: 2%;
+    margin: 2%;
+    border: thick solid black;
+}
+
+.console-header {
+    font-size: 4vw;
+    color: rgb(42, 124, 211);
+    text-align: center;
+    margin-bottom: 2%;
+    border-radius: 2%;
+    border: thick solid rgb(42, 124, 211);
+    padding: 2%;
+    width: auto;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-box {
+    background-color: white;
+    border-radius: 2%;
+    padding: 5%;
+    text-align: center;
+    border: thick solid rgb(42, 124, 211);
+    margin-bottom: 5%;
+}
+
+    .product-box img {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 2%;
+    }
+
+    .product-box ul {
+        list-style-type: disc;
+        margin: 5%;
+        text-align: left;
+    }
+
+        .product-box ul li {
+            margin: 2% 0;
+        }
+
+/* About Us Page Styles */
+.content-box {
+    text-align: center;
+    background-color: white;
+    padding: 3%;
+    border-radius: 2%;
+    border: thick solid rgb(42, 124, 211);
+    margin-bottom: 3%;
+}
+
+.additional-info-container {
+    width: 90%;
+    text-align: center;
+    background-color: white;
+    padding: 3%;
+    border-radius: 2%;
+    border: thick solid rgb(42, 124, 211);
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
